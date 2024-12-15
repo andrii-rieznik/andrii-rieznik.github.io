@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+   <head>
+      <meta charset="UTF-8">
+      <title>{{ page.title }}</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          text-align: center;
+        }
+
+        .card {
+          background-color: #1a1a2e;
+          color: white;
+          border-radius: 15px;
+          padding: 30px;
+          width: 80%;
+          max-width: 500px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-image {
+          width: 100%;
+          height: 500px;
+          background-color: #16213e;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+
+        .card-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+        .greeting-message {
+          margin-top: 20px;
+        }
+
+        .cool-message {
+          margin-top: 20px;
+          font-size: 14px;
+          color: #4ecdc4;
+        }
+      </style>
+   </head>
+   <body>
+      {{ content }}
+   </body>
+</html>

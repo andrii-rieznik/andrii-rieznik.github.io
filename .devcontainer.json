@@ -1,0 +1,44 @@
+{
+  "name": "Ruby",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/ruby:3-bookworm",
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [4000],
+
+  // Install required gems
+  "onCreateCommand": "bundle install",
+
+  // Use 'postCreateCommand' to run commands after creating the container.
+  // "postCreateCommand": "bundle exec jekyll serve",
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "tasks": {
+          "version": "2.0.0",
+          "tasks": [
+            {
+              "label": "Jekyll: Serve",
+              "type": "shell",
+              "command": "bundle",
+              "args": [
+                "exec",
+                "jekyll",
+                "serve"
+                ],
+              "group": "test"
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  "remoteUser": "root"
+}
